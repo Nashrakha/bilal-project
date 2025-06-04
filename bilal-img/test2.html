@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bilal Ali - Typewriter Demo</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #ffffff;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      /* No cursor initially */
+    }
+
+    .typing {
+      border-right: 2px solid #fff;
+      animation: typing 1s steps(10, end) 0.5s forwards, blink 0.5s step-end 0.5s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 10ch }
+    }
+
+    @keyframes blink {
+      0%, 100% { border-color: #fff; }
+      50% { border-color: transparent; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="typewriter">Bilal Ali</h1>
+
+  <script>
+    const heading = document.getElementById("typewriter");
+
+    // Add typing class after 0.5s (delay before typing begins, no cursor yet)
+    setTimeout(() => {
+      heading.classList.add("typing");
+    }, 500);
+
+    // Remove cursor after typing ends (~0.5s delay + 1s typing)
+    setTimeout(() => {
+      heading.style.borderRight = "none";
+    }, 1600);
+  </script>
+</body>
+</html>

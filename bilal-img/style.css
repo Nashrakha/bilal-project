@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'heading-36';
+    src: url('fonts/heading_now/HeadingNow-36Bold.cba0ddf9cdf4edee6f1df1.8067145c692daab1de491b092613b4b.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'brittany_signature';
+    src: url('fonts/brittany_signature/BrittanySignature.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neue-normal';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Light.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neue-ragular';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'neue-bold';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Ultrabold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-heading{
+    font-family: 'heading-36', sans-serif;
+}
+.brittany_signature {
+    font-family: 'brittany_signature', sans-serif;
+}
+.neue-normal {
+    font-family: 'neue-normal', sans-serif;
+}
+.neue-ragular{
+    font-family: 'neue-ragular', sans-serif;
+}
+.neue-bold{
+    font-family: 'neue-bold', sans-serif;
+}
+
+.syne {
+    font-family: 'Syne', sans-serif;
+}
+
+.space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Smooth transitions */
+.nav-link,
+#mobile-menu a,
+.project-nav-link {
+    transition: all 0.3s ease;
+}
+
+.syne {
+    font-family: 'Syne', sans-serif;
+}
+
+.space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+    /* font-weight: normal; */
+}
+
+
+.unbounded {
+    font-family: 'Unbounded', sans-serif;
+}
+
+
+.marquee-track {
+    display: inline-flex;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-30%);
+    }
+}
+
+
+
+body {
+    background-image: url('/image/back1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 1420px) {
+    .circle-img{
+        position: relative;
+        right: 20px;
+    }
+}
+@media (max-width: 1980px) {
+    .circle-img{
+        position: relative;
+        right: 290px;
+    }
+}

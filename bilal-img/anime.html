@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Bilal Ali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      background: #0f0f0f;
+      font-family: 'Space Grotesk', sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    #main {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .circle {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      width: 0;
+      height: 0;
+      z-index: 2;
+    }
+
+    #message {
+      text-align: center;
+      opacity: 0;
+      z-index: 3;
+    }
+
+    .word {
+      margin: 10px 0;
+      opacity: 0;
+      filter: blur(10px);
+    }
+
+    .bold {
+      font-weight: 700;
+      font-size: 3.5rem;
+    }
+
+    .regular {
+      font-size: 2rem;
+    }
+
+    h1#typewriter {
+      font-size: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      opacity: 0;
+      z-index: 3;
+      border-right: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div class="circle"></div>
+    <div id="message">
+      <div class="word bold">Hey, I'm glad you're here!</div>
+      <div class="word regular">Welcome to my portfolio.</div>
+    </div>
+    <h1 id="typewriter">Bilal Ali</h1>
+  </div>
+
+  <script>
+    const circle = document.querySelector(".circle");
+    const message = document.getElementById("message");
+    const words = document.querySelectorAll(".word");
+    const typewriter = document.getElementById("typewriter");
+
+    // Step 1: Expand the circle
+    gsap.to(circle, {
+      width: "200vw",
+      height: "200vw",
+      duration: 2,
+      opacity: 1,
+      ease: "power2.out"
+    });
+
+    // Step 2: Show the message with fade-in blur
+    gsap.to(message, {
+      opacity: 1,
+      delay: 2,
+      duration: 0.5
+    });
+
+    gsap.to(words, {
+      opacity: 1,
+      filter: "blur(0px)",
+      stagger: 0.4,
+      delay: 2.5,
+      duration: 1
+    });
+
+    // Step 3: Hide circle, show typewriter text
+    gsap.to(circle, {
+      opacity: 0,
+      delay: 5,
+      duration: 1
+    });
+
+    gsap.to(typewriter, {
+      opacity: 1,
+      width: "10ch",
+      delay: 5.5,
+      duration: 1.5,
+      ease: "steps(10)"
+    });
+
+    // Optional: remove blinking cursor after typing
+    setTimeout(() => {
+      typewriter.style.borderRight = "none";
+    }, 7500);
+  </script>
+</body>
+</html>

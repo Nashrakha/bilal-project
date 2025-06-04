@@ -1,0 +1,380 @@
+/* fonts  */
+@font-face {
+    font-family: 'heading-36';
+    src: url('fonts/heading_now/HeadingNow-36Bold.cba0ddf9cdf4edee6f1df1.8067145c692daab1de491b092613b4b.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'brittany_signature';
+    src: url('fonts/brittany_signature/BrittanySignature.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neue-normal';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Light.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neue-ragular';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neue-bold';
+    src: url('fonts/Neue/Neue-machina/NeueMachina-Ultrabold.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-heading {
+    font-family: 'heading-36', sans-serif;
+}
+
+.brittany_signature {
+    font-family: 'brittany_signature', sans-serif;
+}
+
+.neue-normal {
+    font-family: 'neue-normal', sans-serif;
+}
+
+.neue-ragular {
+    font-family: 'neue-ragular', sans-serif;
+}
+
+.neue-bold {
+    font-family: 'neue-bold', sans-serif;
+}
+
+.syne {
+    font-family: 'Syne', sans-serif;
+}
+
+.space-grotesk {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url('/image/websitebg.jpg');
+}
+
+/* type animation  */
+.bilal {
+    width: 100%;
+
+}
+
+.bilal h1 {
+    /* font-size: 28rem; */
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.design {
+    margin-top: -16vh;
+}
+
+.bilal img,
+.about .svg {
+    animation: rotate 3s linear infinite;
+    transition: transform 0.3s ease;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* Small devices - up to 425px */
+@media only screen and (max-width: 425px) {
+    .bilal h1 {
+        font-size: 9rem;
+    }
+
+    .bilal img {
+        position: relative;
+        margin-top: 10px;
+        left: 85vh;
+        width: 50px;
+        top: -152px;
+    }
+
+    /* .about {
+        position: relative;
+        top: -5vh;
+    } */
+
+    .design {
+        margin-top: -7vh;
+    }
+
+    .design img {
+        width: 70px;
+        height: 17px;
+    }
+
+    .design h2 {
+        font-size: 26px;
+    }
+
+    .about .svg {
+        display: block;
+        width: 100px;
+        left: 84px;
+        top: -30vh;
+    }
+
+    /* .about .para {
+        position: relative;
+        top: 2vh;
+    } */
+
+    .exp-left .work {
+        font-size: 2rem;
+        padding-left: 70px;
+    }
+
+    .exp-left .exp {
+        font-size: 3.5rem;
+        padding-left: 130px;
+    }
+
+    .exp-left .project {
+        font-size: 3rem;
+        position: relative;
+        top: -40px;
+        left: -50px;
+    }
+
+    .exp-left .project-2 {
+        font-size: 2rem;
+        position: relative;
+        top: -40px;
+        left: -50px;
+    }
+
+    .exp-left .project-3 {
+        font-size: 2rem;
+        position: relative;
+        top: -58px;
+        left: -50px;
+    }
+
+    .brand {
+        position: relative;
+        top: -5vh;
+    }
+
+    .branding {
+        position: relative;
+        right: 1vh;
+    }
+}
+
+/* Medium devices - tablets ≥ 768px */
+@media only screen and (min-width: 768px) {
+
+    .bilal h1 {
+        font-size: 14rem;
+    }
+
+    .design {
+        margin-top: -8vh;
+    }
+
+    .design img {
+        width: 140px;
+        height: 30px;
+    }
+
+    .design h2 {
+        font-size: 2rem;
+    }
+
+    .about .svg {
+        display: none;
+    }
+
+    .bilal-right h1 {
+        font-size: 9rem;
+    }
+
+    .bilal img {
+        position: relative;
+        left: 53vh;
+        top: -22vh;
+        width: 100px;
+    }
+
+    .bilal-left img {
+        width: 100%;
+        min-width: 700px;
+    }
+
+    .exp-left .work {
+        font-size: 6rem;
+        padding-left: 80px;
+    }
+
+    .exp-left .exp {
+        font-size: 9rem;
+        padding-left: 250px;
+    }
+}
+
+/* Large devices - desktops ≥ 1024px */
+@media only screen and (min-width: 1024px) {
+
+    .bilal h1 {
+        font-size: 28rem;
+    }
+
+    .bilal img {
+        position: relative;
+        left: 145vh;
+        top: -53vh;
+    }
+
+    .design {
+        margin-top: -11vh;
+    }
+
+    .design img {
+        width: 290px;
+        height: 70px;
+    }
+
+    .design h2 {
+        font-size: 4rem;
+        padding-top: 10px;
+    }
+
+    .about .svg {
+        display: block;
+        left: 180px;
+        top: -29vh;
+    }
+
+    .about .para {
+        position: relative;
+        top: -13vh;
+    }
+
+    .bilal-right h1 {
+        font-size: 13rem;
+    }
+
+    .bilal-left img {
+        width: 100%;
+        min-width: 620px;
+    }
+
+    .exp-left .work {
+        position: relative;
+        top: 5vh;
+        font-size: 6rem;
+    }
+
+    .exp-left .exp {
+        font-size: 12rem;
+        padding-left: 250px;
+    }
+
+    .exp-left .project {
+        font-size: 7rem;
+    }
+}
+
+
+/* Ultra-wide screens - 1980px and up */
+@media only screen and (min-width: 1920px) {
+    .body {
+        overflow-x: hidden;
+    }
+
+    .bilal h1 {
+        font-size: 32rem;
+    }
+
+    .bilal img {
+        position: relative;
+        left: 130vh;
+        top: -47vh;
+        width: 200px;
+    }
+
+    .design {
+        margin-top: -14vh;
+    }
+
+    .design h2 {
+        font-size: 5rem;
+        padding-top: 10px;
+    }
+
+    .design img {
+        width: 310px;
+        height: 70px;
+    }
+
+    .about h2 {
+        font-size: 20rem;
+    }
+
+    .about .svg {
+        left: 23vh;
+        top: -26vh;
+        width: 300px;
+    }
+
+    .about .para {
+        position: relative;
+        top: -12vh;
+    }
+
+    .about-left img {
+        width: 100%;
+        min-width: 900px;
+    }
+
+    .bilal-left img {
+        width: 100%;
+        min-width: 920px;
+    }
+
+    .exp-left .work {
+        font-size: 7rem;
+
+    }
+
+    .exp-left {
+        margin-left: 100px;
+    }
+
+    .exp-left .exp {
+        font-size: 17rem;
+        padding-left: 200px;
+    }
+
+    .project {
+        font-size: 10px;
+    }
+
+}

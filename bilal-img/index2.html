@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilal Ali</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+    .syne {
+      font-family: 'Syne', sans-serif;
+    }
+
+    .space-grotesk {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Smooth transitions for hover effects */
+    .nav-link,
+    #mobile-menu a {
+      transition: all 0.3s ease;
+    }
+
+    /* Project grid item hover effect */
+    .project-item {
+      transition: transform 0.3s ease;
+    }
+
+    .project-item:hover {
+      transform: scale(1.02);
+    }
+
+    /* Mobile menu animation */
+    #mobile-menu {
+      transition: max-height 0.3s ease-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    #mobile-menu.show {
+      max-height: 200px;
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <nav class="syne px-4 sm:px-6 lg:px-8 py-4">
+    <div class="max-w-8xl mx-auto">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="index.html">
+            <h1 class="text-xl md:text-2xl font-bold text-white uppercase">Bilal <span class="text-[#F0532C]">Ali</span>
+            </h1>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <a href="index.html"
+            class="nav-link text-white hover:text-[#F0532C] border-b-2 border-transparent hover:border-[#F0532C] px-1 py-2">Projects</a>
+          <a href="about.html"
+            class="nav-link text-white hover:text-[#F0532C] border-b-2 border-transparent hover:border-[#F0532C] px-1 py-2">About</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="nav-link block py-2 text-white hover:text-[#F0532C]">Projects</a>
+      <a href="about.html" class="nav-link block py-2 text-white hover:text-[#F0532C]">About</a>
+    </div>
+  </nav>
+
+  <!-- Hero Image -->
+  <div class="w-full flex justify-center mt-2 lg:mt-4">
+    <div class="w-full max-w-8xl px-4 sm:px-6 lg:px-8">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/60de481ca331cf57633f7ca2/0b7d1d79-7179-42cd-842e-ac47594d5ee9/Rezen_Incense_%E2%80%94_JOE_DRAKEFORD_2_2_auto_x2+3.jpg?format=2500w"
+        alt="Bilal Ali Portfolio" class="w-full h-auto lg:h-[650px] object-cover rounded-lg shadow-lg">
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-20">
+    <div class="flex flex-col md:flex-row justify-between gap-8 lg:gap-16">
+      <!-- Left Section -->
+      <div class="w-full md:w-1/2 lg:w-5/12">
+        <p class="text-2xl sm:text-3xl lg:text-4xl uppercase syne font-bold">Hi there, I'm Bilal Ali.</p>
+        <div class="mt-4 space-y-2">
+          <p class="break-words">
+            <a href="mailto:bilalaligraphic@gmail.com"
+              class="text-blue-400 syne hover:underline text-lg">bilalaligraphic@gmail.com</a>
+          </p>
+          <a href="tel:+918750421525" class="text-white hover:text-blue-300 syne text-lg">+91 87504 21525</a>
+        </div>
+      </div>
+      <!-- Right Section -->
+      <div class="w-full md:w-1/2 lg:w-5/12 space-grotesk text-lg leading-relaxed">
+        <p>
+          I'm a graphic designer with a keen interest in brand identity, logo design, and illustration.
+          Please check out my work below to get an understanding of my creative process, products, and outcomes.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Projects Grid -->
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div class="relative group overflow-hidden cursor-pointer project-item rounded-lg">
+        <img src="image/1/5.webp" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover" alt="Easy to Rest Project" />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <a href="easy-to-rest.html" class="text-white text-xl font-medium uppercase syne">Easy to rest</a>
+        </div>
+      </div>
+
+
+      <div class="relative group overflow-hidden cursor-pointer project-item rounded-lg">
+        <img src="image/sattvik/s2.webp" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
+          alt="Sattvik Project" />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <a href="sattvik.html" class="text-white text-xl font-medium uppercase syne">Sattvik</a>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden cursor-pointer project-item rounded-lg">
+        <img src="image/afaan/flags.webp" class="w-full h-48 sm:h-56 md:h-64 lg:h-72 object-cover"
+          alt="Afaan Project" />
+        <div
+          class="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+          <a href="afaan.html" class="text-white text-xl font-medium uppercase syne">Afaan</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

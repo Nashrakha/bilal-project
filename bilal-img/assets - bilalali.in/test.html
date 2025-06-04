@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Bilal Ali</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #0f0f0f;
+      color: #0f0f0f;
+      font-family: 'Space Grotesk', sans-serif;
+      overflow: hidden;
+    }
+
+    #loader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      flex-direction: column;
+    }
+
+    .circle {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      color: #0f0f0f;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      animation: expandCircle 2s forwards, stayFullSize 3s 2s forwards, fadeOutCircle 1s 5s forwards;
+    }
+
+    @keyframes expandCircle {
+      0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 200vw;
+        height: 200vw;
+        opacity: 1;
+      }
+    }
+
+    @keyframes stayFullSize {
+      100% {
+        width: 200vw;
+        height: 200vw;
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOutCircle {
+      0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    #message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      animation: fadeInMessage 2s 1s forwards; /* Adjusted fade-in delay */
+    }
+
+    .word {
+      opacity: 0;
+      animation: fadeInWord 2s forwards;
+      margin: 5px;
+    }
+
+    .word:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .word:nth-child(2) {
+      animation-delay: 0.5s; /* Second line comes after 0.5s */
+    }
+
+    @keyframes fadeInMessage {
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInWord {
+      0% {
+        opacity: 0;
+        filter: blur(10px); /* Start with blur */
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0); /* End with clear text */
+      }
+    }
+
+    #main-content {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      opacity: 0;
+      animation: fadeInText 2s 4s forwards;
+    }
+
+    .bold {
+      font-weight: 700;
+      font-size: 4.5rem;
+    }
+
+    .regular {
+      font-size: 2.7rem;
+    }
+
+    @keyframes fadeInText {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="loader">
+    <div class="circle"></div>
+    <div id="message">
+      <span class="word bold">Hey, I'm glad you're here!</span>
+      <span class="word regular">Welcome to my portfolio.</span>
+    </div>
+  </div>
+
+  <div id="main-content">
+    <h1 id="typewriter">Bilal Ali</h1>
+  </div>
+
+  <script>
+    const loader = document.getElementById("loader");
+    const messageContainer = document.getElementById("message");
+    const mainContent = document.getElementById("main-content");
+    const heading = document.getElementById("typewriter");
+
+    const words = document.querySelectorAll('.word');
+    let delay = 0;
+
+    // Add words to the message container with fade-in animation
+    words.forEach((wordElement) => {
+      setTimeout(() => {
+        wordElement.style.animationDelay = `${delay}s`;
+        wordElement.style.opacity = 1;
+      }, delay * 1000);
+      delay += 2.5; // Reduced delay for the fade-in of each word
+    });
+
+    // After 6 seconds (circle stays 1 extra second), the text will be fully visible
+    setTimeout(() => {
+      loader.style.display = "none";
+      mainContent.style.display = "flex";
+      heading.style.opacity = 1;
+    }, 6 * 1000); // 6 seconds total animation delay
+  </script>
+
+</body>
+</html>
